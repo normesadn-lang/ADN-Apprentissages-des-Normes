@@ -1,0 +1,23 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { background: #E8E4DC; }
+
+/* Pulsation des quadrants de phases déjà complétées */
+@keyframes adnPulse {
+  0%, 100% { opacity: .55; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.04); }
+}
+
+/* Halo clignotant autour du quadrant de la phase en cours */
+@keyframes adnCurrent {
+  0%, 100% { box-shadow: inset 0 0 25px var(--c, #fff)55, 0 0 8px  var(--c, #fff)66; }
+  50%      { box-shadow: inset 0 0 45px var(--c, #fff)88, 0 0 18px var(--c, #fff)aa; }
+}
+
+/* Lueur du pion */
+@keyframes adnGlow {
+  0%, 100% { filter: drop-shadow(0 0 4px  var(--c, #fff)88); }
+  50%      { filter: drop-shadow(0 0 12px var(--c, #fff)cc); }
+}
+
+.adn-neon { font-weight: 900; letter-spacing: 1.5px; }
